@@ -31,6 +31,10 @@ function generarNumero(){
 pantallaInicio.classList.add("oculto");
 perdiste.classList.add("oculto");
 
+chances = 0
+lPer.innerHTML = null
+
+
 var num1
 num1 = Math.random()*10
 numF1 = Math.floor(num1)
