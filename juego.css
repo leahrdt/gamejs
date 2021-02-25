@@ -2,7 +2,9 @@
     font-family: 'Orbitron', sans-serif;
 }
 
-
+#btn_ingresa{
+    margin-top:1%;
+}
 .oculto{
     display: none
 }
@@ -140,5 +142,15 @@ z-index: 22;
 margin-left: 50%;
 margin-top: 5%;
 transform: translateX(-50%);
+}
+.textInAlertt{
+position:absolute;
+z-index: 22;
+margin-left: 50%;
+margin-top: 10%;
+transform: translateX(-50%);
+}
 
+.btnSel{
+    padding:0.1rem !important;
 }
