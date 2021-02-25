@@ -88,10 +88,12 @@ formRegistro.addEventListener("submit", e => {
     StatusCasi = 0;
 
 if(inputNum1.value === inputNum2.value || inputNum3.value === inputNum4.value || inputNum1.value === inputNum4.value || inputNum2.value === inputNum3.value || inputNum1.value == inputNum3.value || inputNum2.value === inputNum4.value){
+    
     cGan.innerHTML = Chances;
     aVal.classList.remove("oculto");
 }else{
     cPer.innerHTML = Chances;
+    cGan.innerHTML = Chances;
     aVal.classList.add("oculto");
     var agregarNum = document.createElement("li");
     agregarNum.textContent = inputNum1.value + inputNum2.value + inputNum3.value + inputNum4.value
