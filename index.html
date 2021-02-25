@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="juego.css">
+    <title>GAME .JS</title>
+</head>
+<body>
+
+    <div id="pantallaInicio" class="pantallaInicio">
+        <h2 class="tituloPrincipal">K E Y . J S</h2>
+        <button id="instrucciones">Instrucciones</button>
+                <div id="instLista"  class="instrucciones ullis oculto">
+                    <div >
+                        <ul >
+                            <li class="lli">
+                                - Objetivo: Debe adivinar una clave de 4 cifras.
+                            </li>
+                            <br>
+                            <li class="lli">
+                                - Pistas: Cada vez que ingrese un número, tendrán cifras REGULARES y BUENAS  
+                            </li>
+                            <li class="lli">
+                                Las cifras REGULARES indican que existen números de los que eligió que son correctos, pero que no están en la posición correcta.  
+                            </li>
+                            <li class="lli">
+                                Las cifras BUENAS indican que existen números correctos tanto en valor como en posición.  
+                            </li>
+                            <li class="lli">
+                                Nunca sabrá cuáles son los números REGULARES Y BUENOS 
+                            </li class="lli">
+                            <br>
+                            <li class="lli" > 
+                                - Al iniciar el juego se le generará una clave aleatoria, y tiene 60 segundos para adivinarla, Suerte!
+                            </li>
+                            <br>
+                            <li class="lli">
+                                <button id="aceptarInstrucciones">Aceptar</button>
+                            </li>
+                        </ul>
+            </div>
+        </div>
+
+        <button id="start" class="start">Start</button>
+
+    </div>
+
+    <div id="perdiste" class="pantallaInicio oculto ">
+        <h2 class="tituloPrincipal">P E R D I S T E !</h2>
+        <button  id="again" class="start"> <h3>Again</h3></button>
+        <div >
+            
+            <p class="tituloPrincipal ">Chances</p>
+            <p class="tituloPrincipal" ID="chancesPerdidas">0</p>
+        </div>
+    </div>
+
+    <div id="ganaste" class="pantallaInicio  oculto">
+        <h2 class="tituloPrincipal">G A N A S T E</h2>
+
+        <div >
+            
+            <p class="tituloPrincipal" >Chances</p>
+            <p class="tituloPrincipal" ID="chancesGanadas">0</p>
+        </div>
+    </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="header" class="col-6">K E Y . J S</div>
+        <div class="header" class="col-6">¿ * * * * ?</div>
+    </div>
+</div>
+
+<div class="container">
+
+<div class="row">
+    <div class="col-6">
+        <div class=" textCount col-12" >Le quedan menos de
+        <div class="col-12" id="cuentaRegresiva">
+        </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="textCount col-12">Numeros que fracazaron   </div>
+        <div class="overf overflow-auto row">
+        <div class="col-12" id="cuentaRegresiva">
+        </div>
+        <div class="col-12" >
+        <ul id="listaPerdidas">
+        </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="container">
+</div>
+
+<div id="alertaValores" class="alert alert-warning alert-dismissible fade show oculto" role="alert">
+    <strong class="textInAlert">Ingresastes dos o mas valores iguales!   No pierdas el tiempo! <br>
+    </strong>
+
+    <br>
+    <button id="textInAlert" class="textInAlert">  
+        ACEPTAR
+    </button>
+</div>
+
+<div class="container">
+    <class class="row">
+    <form name="formulario" action="" method="GET" id="form_login" novalidate>
+
+<div class="container">
+    <div class="FormNumbers row">
+<div class="col-3 ">
+    <select name="numero1" class="form-select" aria-label="Default select example">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+        </select>
+</div>
+<div class="col-3">
+    <select name="numero2" class="form-select" aria-label="Default select example">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+    </select>
+</div>
+<div class="col-3">
+    <select name="numero3" class="form-select col-3" aria-label="Default select example">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+    </select>
+</div>
+<div class="col-3">
+    <select name="numero4" class="form-select col-3" aria-label="Default select example">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+    </select>
+</div>
+
+    <div class="d-flex">
+            <button id="btn_ingresa" type="submit" class="probarSuerte btn btn-primary col-12">PROBAR SUERTE</button>
+    </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="alert alert-success" role="alert">
+                        Cifras Buenas:<p ID="pBuenas">0</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="alert alert-danger" role="alert">
+                        Cifras Regulares:<p ID="pCasi">0</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+</form>
+</class>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="app.js">  </script>
+<script src="juego.js">  </script>
+</body>
+</html>

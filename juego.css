@@ -1,0 +1,144 @@
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+.oculto{
+    display: none
+}
+
+.pantallaInicio{
+    width: 100%;
+    height: 110vh;
+    position: absolute;
+    background-color: #8338ec;
+}
+
+.tituloPrincipal{
+    font-size: 50px;
+    justify-items: center;
+    margin-top: 5%;
+    color:#ffbe0b;
+    text-align:center;
+}
+
+#instrucciones{
+    margin-top: 5%;
+    color:#8338ec;
+    justify-items: center;
+    text-align:center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.ullis{
+    color:#ffbe0b;
+    padding: 3rem;
+}
+
+.Chances{
+    font-size: 100px;
+    justify-items: center;
+    margin-top: 5%;
+    color:#ffbe0b;
+    text-align:center;
+}
+
+.start{
+    text-decoration: none; 
+    padding: 10px 5px;
+    width: 100%;
+    height: 10%;
+    border: 2px solid #fb5607;
+    background-color: #fb5607;
+    display: block;
+    border-radius: 10px;  
+    box-shadow: 5px 5px 5px 0px ;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+
+
+}
+.starthover { 
+    box-shadow: 5px 11px 11px 0px ;
+    
+    background-color: #fb5607;
+}
+
+.FormNumbers{
+    margin-top: 17%;
+}
+.probarSuerte{
+    margin-top:5%
+}
+
+.alert{
+    z-index: -2 !important;
+    margin-top: 3%;
+}
+
+
+#cuentaRegresiva{
+    text-align: center;
+    color: #fb5607;
+    font-size: xx-large;
+    margin-bottom: -22px;
+}
+
+.textCount{
+    text-align: center;
+    color: #fb5607;
+    font-size: x-large;
+}
+
+.header{
+    margin-top:0.1rem;
+    color:#fb5607;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: x-large;
+}
+
+.overf{
+    height: 19vh!important;
+    overflow: auto
+
+}
+
+#form_login{
+    height: 22% !important;
+}
+
+#instLista{
+position:absolute;
+z-index: 22;
+margin-left: 50%;
+transform: translateX(-50%);
+width: 100%;
+background-color: #8338ec;
+list-style:none;
+
+
+}
+
+.lli{
+    list-style:none
+    
+}
+
+#alertaValores{
+    position:absolute !important;
+    z-index: 2222 !important;
+    width: 100%;
+    height: 50%;
+    top:5%;
+    background-color: #ffbe0b!important;
+}
+.textInAlert{
+    position:absolute;
+z-index: 22;
+margin-left: 50%;
+margin-top: 5%;
+transform: translateX(-50%);
+
+}
